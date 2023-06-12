@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { styled } from 'styled-components';
+import SubmitTodo from './submit';
+
+const Header = styled.header`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const Title = styled.h1`
+  color: rgb(255, 131, 134);
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header>
+        <Title>Todo List</Title>
+        <SubmitTodo />
+      </Header>
     </div>
   );
 }
